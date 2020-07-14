@@ -1,0 +1,18 @@
+{
+  "name": "migration",
+  "version": "1.0.0",
+  "description": "Data-Dome migration module",
+  "main": "migration.js",
+  "scripts": {
+    "migrate": "npm install && node migration.js"
+  },
+  "keywords": [],
+  "author": "Hrishikesh R",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.2.0"
+  }
+}
