@@ -1,7 +1,13 @@
-const db_host = "127.0.0.1";
-const db_port = 3306;
-const db_schema = "data_dome";
-const db_user = "root";
-const db_password = "root";
+const dbHost = '127.0.0.1';
+const dbPort = 3306;
+const dbSchema = 'data_dome';
+const dbUser = 'root';
+const dbPassword = 'root';
 
-module.exports = { db_host, db_port, db_user, db_password, db_schema };
+module.exports = {
+  dbHost,
+  dbPort,
+  dbUser,
+  dbPassword,
+  dbSchema,
+};

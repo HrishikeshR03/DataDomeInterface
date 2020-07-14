@@ -1,15 +1,15 @@
-const fs = require("fs");
+const fs = require('fs');
 
-const migrationDataJSON = fs.readFileSync("./data/migration_data.json");
+const migrationDataJSON = fs.readFileSync('./data/migration_data.json');
 const parsedJSON = JSON.parse(migrationDataJSON);
-const data = parsedJSON.data;
-let entity_records = [];
+const { data } = parsedJSON;
+const entityRecords = [];
 data.forEach((entity) => {
-  let record = [];
+  const record = [];
   record.push(entity.name);
   record.push(entity.description);
   record.push(entity.parent);
-  entity_records.push(record);
+  entityRecords.push(record);
 });
 
-module.exports.getEntityRecords = entity_records;
+module.exports.getEntityRecords = entityRecords;
