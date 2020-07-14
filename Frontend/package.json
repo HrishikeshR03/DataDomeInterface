@@ -1,22 +1,21 @@
 {
-  "name": "backend",
+  "name": "frontend",
   "version": "1.0.0",
-  "description": "REST API for Data Dome application",
-  "main": "server.js",
+  "description": "UI Application for Data dome",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "npm install && node ./src/server.js"
+    "client": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "author": "Hrishikesh R",
   "license": "ISC",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "mysql": "^2.18.1"
-  },
   "devDependencies": {
     "eslint": "^7.4.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
   }
 }

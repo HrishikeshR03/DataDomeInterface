@@ -6,4 +6,9 @@ The API GET endpoint /hierarchy provides the correct hierarchy tree structure by
 
 Transformation logic's complexity to get the hierarchy structure is O(n).
 This can be improved with tree datastructure and tree traversal algorithms.
-As of now, JSON has to be traversed recursively to get data of a respecitve node. 
+As of now, JSON has to be traversed recursively to get data of a respecitve node.
+
+Run the server from command prompt
+<pre>
+npm run server
+</pre>
