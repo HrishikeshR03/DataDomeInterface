@@ -5,17 +5,21 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "parcel index.html",
-    "build": "parcel build index.html"
+    "client": "parcel serve index.html",
+    "build": "parcel build index.html",
+    "lint": "eslint src"
   },
   "author": "Hrishikesh R",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.4.0",
     "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "parcel": "^2.0.0-beta.1"
   },
   "dependencies": {
     "axios": "^0.19.2"
-  }
+  },
+  "browserslist": "> 0.2%"
 }

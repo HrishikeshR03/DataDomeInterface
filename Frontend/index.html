@@ -8,14 +8,19 @@
   </head>
 
   <body>
+    <!-- chart -->
     <div class="tree" id="hierarchySection"></div>
-    <div id="popup1" class="overlay">
+    <!-- modal window -->
+    <div id="popupContainer" class="overlay">
       <div class="popup">
-        <h2 id="_entityName"></h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content" id="_entityDescription"></div>
+        <a class="popup-close" href="#">&times;</a>
+        <div class="popup-header">
+          <h2 id="entityName" class="entity-name"></h2>
+        </div>
+        <div class="popup-content" id="entityDescription"></div>
       </div>
     </div>
+    <!-- Bundled JavaScript -->
     <script type="text/javascript" src="./src/app.js"></script>
   </body>
 </html>

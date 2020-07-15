@@ -15,17 +15,19 @@ app.use((req, res, next) => {
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept',
   );
-  console.log('Time:', Date.now());
   next();
 });
 
 app.get(appConfig.hierarchyEndpoint, async (req, res) => {
-  const conn = await connection(dbConfig).catch(console.log);
-  const fetchHierarchyQuery = 'SELECT name, description, parent FROM entity_details';
-  const results = await query(conn, fetchHierarchyQuery).catch(console.log);
-  let hierarchyData = [];
-  hierarchyData = transform.getHierarchy(results);
-  res.json(hierarchyData);
+  try {
+    const fetchHierarchyQuery = 'SELECT name, description, parent FROM entity_details';
+    const conn = await connection(dbConfig);
+    const results = await query(conn, fetchHierarchyQuery);
+    const hierarchyData = transform.getHierarchy(results);
+    res.json(hierarchyData);
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 app.listen(appPort, () => console.log(`DataDome app is listening on port ${appPort}!`));

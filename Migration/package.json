@@ -4,7 +4,7 @@
   "description": "Data-Dome migration module",
   "main": "migration.js",
   "scripts": {
-    "migrate": "npm install && node migration.js"
+    "migrate": "nodemon migration.js"
   },
   "keywords": [],
   "author": "Hrishikesh R",
@@ -15,6 +15,8 @@
   "devDependencies": {
     "eslint": "^7.4.0",
     "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "nodemon": "^2.0.4"
   }
 }

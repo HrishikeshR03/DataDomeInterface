@@ -1,13 +1,12 @@
-/* eslint-disable linebreak-style */
 module.exports = {
-  extends: 'airbnb-base',
   env: {
-    node: true,
-    es6: true,
     browser: true,
+    es2020: true,
   },
-  rules: {
-    'no-console': 'off',
-    'linebreak-style': 0,
+  extends: ['airbnb-base'],
+  parserOptions: {
+    ecmaVersion: 11,
+    sourceType: 'module',
   },
+  rules: {},
 };
